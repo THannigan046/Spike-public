@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequencer test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.4.3/webcomponents-bundle.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons&amp;display=block" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="Tone.js"></script>
+    <script src="tone-ui.js"></script>
+    <script src="components.js"></script>
+    <style type="text/css">
+        tone-transport {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a sequencer test</h1>
+    <form>
+        <input placeholder="preset name" type="text">
+        <button type="submit">Save preset</button>
+    </form>
+    <button>load preset</button>
+    <h2>Drum Machine</h2>
+    <div id="content">
+        <tone-play-toggle>
+            <tone-button title="Start" aria-label="Start">
+                <button aria-label="Trigger">
+                    <slot>
+                        <mwc-icon>
+                            <!---->play_arrow
+                            <!---->
+                        </mwc-icon>
+                    </slot>
+                </button>
+                <mwc-icon>
+                    <slot>
+                        play_arrow
+                    </slot>
+
+                </mwc-icon>
+            </tone-button>
+        </tone-play-toggle>
+        <tone-slider label="tempo" units="bpm" min="60" max="240" value="204.1241850269784">
+            <div id="container">
+                <div id="label">
+                    <label for="slider">
+                        <!---->tempo
+                        <!---->
+                    </label>
+                    <span class="value">
+                        <!---->204.12
+                        <span class="units">
+                            <!---->bpm
+                            <!---->
+                        </span>
+                    </span>
+                </div>
+
+            </div>
+        </tone-slider>
+        <button>randomize</button>
+        <tone-step-sequencer>
+            <div id="container" style="height: 139px;">
+                <!---->
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell" filled=""></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell" filled=""></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell" filled=""></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <div class="column">
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell" filled=""></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                    <button class="cell"></button>
+                    <!---->
+                </div>
+                <!---->
+                <!---->
+            </div>
+        </tone-step-sequencer>
+        <tone-slider label="Chorus Send" min="-60" max="6" value="-58.20412263938849" units="db">
+            <div id="container">
+                <div id="label">
+                    <label for="slider">
+                        "Chorus Send"
+                    </label>
+                    <span class="value">
+                        "-60"
+                        <span class="units">
+                            "db"
+                        </span>
+                    </span>
+                </div>
+                <mwc-slider name="slider" .step="0">
+                    <div tabindex="0" role="slider" class="mdc-slider mdc-slider--disable-touch-action"
+                        aria-valuemin="-60" aria-valuemax="6" aria-valuenow="-60" data-step="0">
+                        <div class="mdc-slider__track-container">
+                            <div class="mdc-slider__track" style="transform: scaleX(0);">
+                            </div>
+
+                        </div>
+                        <div class="mdc-slider__thumb-container" style="transform: translateX(0px) translateX(-50%);">
+                            <!-- TODO: use cache() directive -->
+
+                            <svg class="mdc-slider__thumb" width="21" height="21">
+                                <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                            </svg>
+                            <div class="mdc-slider__focus-ring"></div>
+                        </div>
+                    </div>
+                </mwc-slider>
+            </div>
+
+        </tone-slider>
+        <tone-slider label="Chebyshev Send" min="-60" max="6" value="-58.20412263938849" units="db">
+            <div id="container">
+                <div id="label">
+                    <label for="slider">
+                        "Chebyshev send"
+                    </label>
+                    <span class="value">
+                        "-60"
+                        <span class="units">
+                            "db"
+                        </span>
+                    </span>
+                </div>
+                <mwc-slider name="slider" .step="0">
+                    <div tabindex="0" role="slider" class="mdc-slider mdc-slider--disable-touch-action"
+                        aria-valuemin="-60" aria-valuemax="6" aria-valuenow="-60" data-step="0">
+                        <div class="mdc-slider__track-container">
+                            <div class="mdc-slider__track" style="transform: scaleX(0);">
+                            </div>
+
+                        </div>
+                        <div class="mdc-slider__thumb-container" style="transform: translateX(0px) translateX(-50%);">
+                            <!-- TODO: use cache() directive -->
+
+                            <svg class="mdc-slider__thumb" width="21" height="21">
+                                <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                            </svg>
+                            <div class="mdc-slider__focus-ring"></div>
+                        </div>
+                    </div>
+                </mwc-slider>
+            </div>
+
+        </tone-slider>
+        <tone-slider label="PingPongDelay Send" min="-60" max="6" value="-58.20412263938849" units="db">
+            <div id="container">
+                <div id="label">
+                    <label for="slider">
+                        "PingPongDelay send"
+                    </label>
+                    <span class="value">
+                        "-60"
+                        <span class="units">
+                            "db"
+                        </span>
+                    </span>
+                </div>
+                <mwc-slider name="slider" .step="0">
+                    <div tabindex="0" role="slider" class="mdc-slider mdc-slider--disable-touch-action"
+                        aria-valuemin="-60" aria-valuemax="6" aria-valuenow="-60" data-step="0">
+                        <div class="mdc-slider__track-container">
+                            <div class="mdc-slider__track" style="transform: scaleX(0);">
+                            </div>
+
+                        </div>
+                        <div class="mdc-slider__thumb-container" style="transform: translateX(0px) translateX(-50%);">
+                            <!-- TODO: use cache() directive -->
+
+                            <svg class="mdc-slider__thumb" width="21" height="21">
+                                <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                            </svg>
+                            <div class="mdc-slider__focus-ring"></div>
+                        </div>
+                    </div>
+                </mwc-slider>
+            </div>
+
+        </tone-slider>
+
+
+        <h2>Polyphonic fm synth</h2>
+        <tone-slider label="Reverb Send" min="-60" max="6" value="-58.20412263938849" units="db">
+            <div id="container">
+                <div id="label">
+                    <label for="slider">
+                        "Reverb send"
+                    </label>
+                    <span class="value">
+                        "-60"
+                        <span class="units">
+                            "db"
+                        </span>
+                    </span>
+                </div>
+                <mwc-slider name="slider" .step="0">
+                    <div tabindex="0" role="slider" class="mdc-slider mdc-slider--disable-touch-action"
+                        aria-valuemin="-60" aria-valuemax="6" aria-valuenow="-60" data-step="0">
+                        <div class="mdc-slider__track-container">
+                            <div class="mdc-slider__track" style="transform: scaleX(0);">
+                            </div>
+
+                        </div>
+                        <div class="mdc-slider__thumb-container" style="transform: translateX(0px) translateX(-50%);">
+                            <!-- TODO: use cache() directive -->
+
+                            <svg class="mdc-slider__thumb" width="21" height="21">
+                                <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                            </svg>
+                            <div class="mdc-slider__focus-ring"></div>
+                        </div>
+                    </div>
+                </mwc-slider>
+            </div>
+
+        </tone-slider>
+    </div>
+
+    </div>
+
+    <script type="text/javascript">
+
+        //drum machine w effects sends 
+        const keys = new Tone.Players({
+            urls: {
+                0: "kick.mp3",
+                1: "snare.mp3",
+                2: "hihat.mp3",
+                3: "tom1.mp3",
+            },
+            fadeOut: "16n",
+            baseUrl: "https://tonejs.github.io/audio/drum-samples/CR78/"
+        }).toDestination();
+
+        //effects sends
+        const chorus = new Tone.Chorus({
+            wet: 1,
+        }).toDestination().start();
+        const chorusChannel = new Tone.Channel({ volume: -60 }).connect(chorus);
+        chorusChannel.receive("chorus")
+
+        const cheby = new Tone.Chebyshev(50).toDestination();
+        const chebyChannel = new Tone.Channel({ volume: -60 }).connect(cheby)
+        chebyChannel.receive("cheby");
+
+        const pingPong = new Tone.PingPongDelay({
+            delayTime: "4n",
+            feedback: 0.6,
+            wet: 1
+        }).toDestination();
+        const pingPongChannel = new Tone.Channel({ volume: -60 }).connect(pingPong)
+        pingPongChannel.receive("pingPong")
+
+        const keysChannel = new Tone.Channel().toDestination();
+        keysChannel.send("chorus")
+        keysChannel.send("cheby")
+        keysChannel.send("pingPong")
+        keys.connect(keysChannel);
+
+
+
+        document.querySelector("tone-play-toggle").addEventListener("start", () => Tone.Transport.start());
+        document.querySelector("tone-play-toggle").addEventListener("stop", () => Tone.Transport.stop());
+        document.querySelector("tone-slider").addEventListener("input", (e) => Tone.Transport.bpm.value = parseFloat(e.target.value));
+        document.querySelector("tone-step-sequencer").addEventListener("trigger", ({ detail }) => {
+            keys.player(detail.row).start(detail.time, 0, "16t");
+        });
+        document.querySelector("[label=\"Chorus Send\"]").addEventListener("input", e => {
+            chorusChannel.volume.value = parseFloat(e.target.value);
+        });
+        document.querySelector("[label=\"Chebyshev Send\"]").addEventListener("input", e => {
+            chebyChannel.volume.value = parseFloat(e.target.value);
+        });
+        document.querySelector("[label=\"PingPongDelay Send\"]").addEventListener("input", e => {
+            pingPongChannel.volume.value = parseFloat(e.target.value);
+        });
+
+
+        //polysynth
+        const limiter = new Tone.Limiter(-55).toDestination();
+        const synth = new Tone.PolySynth(Tone.FMSynth, {
+            oscillator: {
+                partials: [0, 2, 3, 4],
+            }
+        }).connect(limiter);
+
+        piano({
+            parent: document.querySelector("#content"),
+            polyphonic: true,
+            noteon: note => synth.triggerAttack(note.name),
+            noteoff: note => synth.triggerRelease(note.name)
+        });
+
+        ui({
+            tone: synth,
+            parent: document.querySelector("#content"),
+        });
+        const reverb = new Tone.Reverb(3).toDestination();
+        const reverbChannel = new Tone.Channel({ volume: -60 }).connect(reverb);
+        reverbChannel.receive("reverb")
+        const synthChannel = new Tone.Channel().toDestination();
+        synthChannel.send("reverb")
+        synth.connect(synthChannel)
+        document.querySelector("[label=\"Reverb Send\"]").addEventListener("input", e => {
+            reverbChannel.volume.value = parseFloat(e.target.value);
+        });
+
+        drawer().add({
+            tone: chorus,
+        }).add({
+            tone: cheby,
+        }).add({
+            tone: pingPong,
+        }).add({
+            tone: reverb,
+        })
+
+
+    </script>
+
+
+
+</body>
+
+</html>
