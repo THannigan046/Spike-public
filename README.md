@@ -17,18 +17,16 @@ Your solo project is going to require you to accomplish something you've never d
 
 This whole project is basically spike. I'm surprised I built as much as I did given how intimidated/terrified I was this whole week prior. 
 
-The most working reliable tonejs code I could find was in the tonejs examples page on tonejs.github.io. They stored all their js functionality in script tags, so I was able to steal a lot of it by keeping the chrome inspector up on my second monitor and typing stuff out. Surprisingly it only took a few simple imports to get stuff working in plain html. It was pretty much a matter of picking apart examples that I liked and chunking them together based on what I put in my scope doc. The js part was easy enough, it was those darn tonejs html tags that gave me trouble, particularly the sequencer. 
+The most working reliable stuff I could find was in the tonejs examples page on tonejs.github.io. All the js was in script tags, so I copied a lot of it. Surprisingly it only took a few simple imports to get stuff working in plain html. It was pretty much a matter of picking apart examples that I liked and chunking them together based on the plans in my scope doc. The js part was easy enough, it was those darn tonejs html tags that gave me trouble, particularly the sequencer. 
 
 
-I started off by copying the step sequencer from the examples page. Like I said, my biggest gripe was building out the HTML because I had to map out every column and every cell of the thing, plus the weird bpm slider, thankfully there was styling built into one of the imports. I was able to turn it into a drum machine by changing the baseurl to a drum samples folder. A lot of these examples read audio off a server which links you to different sample folders depending on which part of the URL you visit. Needless to say, I downloaded a buncha cool samples from there. 
+I started off by copying the step sequencer from the examples page. Like I said, my biggest gripe was building out the HTML because I had to map out every column and every cell of the thing, plus the weird bpm slider, thankfully there was styling built into one of the imports. I was able to turn it into a drum machine by changing the baseurl to a drum samples folder. A lot of these examples read audio off a server which links you to different sample folders depending on which part of the URL you visit. 
 
 Next came the fx sends. I stole these from the Busses section of the tonejs examples. Was a similar process of building out the html and mapping out the js accordingly. I was kinda surprised by how easy it was to turn a reverb send into a pingpong delay send, all I had to do was change some names around. I later added a tone drawer (drawer().add({})) which builds out controls for each fx component. 
 
 I'm sorta seeing tonejs as a funny mix of jquery and cSound. 
 
-Next came this funny little polysynth. As you can probably guess, I took the bulk of this code from the poly synth section of the examples page. This part of the process was really funny because I spent about an hour busting my ass building out this gigantic html piano, only to realise that the js piano object builds out the whole darn thing for you. I laughed for a couple minutes, then got back to work. once I got the synth playing alongside the drum machine I changed it to an fm synth, then added a limiter and a reverb send. 
-
-I was happy with the thing I made so I made some drum sounds moved some sliders, changed some params around, and jammed out a bit. 
+Next came this funny little polysynth. As you can probably guess, I took the bulk of this code from the poly synth section of the examples page. This part of the process was really funny because I spent about an hour busting my ass building out this gigantic html piano, only to realise that the js piano object builds out the whole darn thing for you. I laughed for a couple minutes, then got back to work. once I got the synth playing alongside the drum machine, i added frequency modulation, a limiter and a reverb send. 
 
 After jamming a bit, I cleaned up the code a tad and added mock-up buttons for saving and loading presets, plus a random button that I hope to get to. 
 
